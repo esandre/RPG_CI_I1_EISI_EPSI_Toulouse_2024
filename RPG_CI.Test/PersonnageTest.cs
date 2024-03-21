@@ -11,6 +11,14 @@ namespace RPG_CI.Test
         }
 
         [Fact]
+        public void InitialementVivant()
+        {
+            var personnage = new Personnage();
+
+            Assert.False(personnage.EstMort);
+        }
+
+        [Fact]
         public void Mort()
         {
             var personnage = new Personnage();
