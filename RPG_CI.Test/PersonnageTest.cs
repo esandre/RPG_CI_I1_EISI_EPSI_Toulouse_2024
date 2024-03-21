@@ -9,5 +9,15 @@ namespace RPG_CI.Test
 
             Assert.Equal(100U, personnage.PointsDeVie);
         }
+
+        [Fact]
+        public void Mort()
+        {
+            var personnage = new Personnage();
+            personnage.Tuer();
+
+            Assert.Equal(0U, personnage.PointsDeVie);
+            Assert.True(personnage.EstMort);
+        }
     }
 }
