@@ -27,5 +27,14 @@ namespace RPG_CI.Test
             Assert.Equal(0U, personnage.PointsDeVie);
             Assert.True(personnage.EstMort);
         }
+
+        [Fact]
+        public void Dégâts()
+        {
+            var personnage = new Personnage();
+            personnage.RecevoirDégâts();
+
+            Assert.Equal(99U, personnage.PointsDeVie);
+        }
     }
 }

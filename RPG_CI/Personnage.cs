@@ -10,4 +10,9 @@ public class Personnage
         PointsDeVie = 0;
         EstMort = true;
     }
+
+    public void RecevoirDégâts()
+    {
+        PointsDeVie--;
+    }
 }
