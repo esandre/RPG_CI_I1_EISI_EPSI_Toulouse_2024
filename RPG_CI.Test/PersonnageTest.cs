@@ -36,4 +36,16 @@ public class PersonnageTest
 
         Assert.Equal(99U, personnage.PointsDeVie);
     }
+
+    [Fact]
+    public void DégâtsSupérieursALaVie()
+    {
+        var personnage = new Personnage();
+        for (var i = 0; i < 101; i++)
+        {
+            personnage.RecevoirDégâts();
+        }
+
+        Assert.Equal(0U, personnage.PointsDeVie);
+    }
 }
