@@ -13,6 +13,7 @@ public class Personnage
 
     public void RecevoirDégâts()
     {
+        if (PointsDeVie == 0) return;
         PointsDeVie--;
     }
 }
